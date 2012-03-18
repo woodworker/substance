@@ -20,13 +20,20 @@ s.views.Node.define('/type/map', {
         var map = new L.Map(this.model.html_id + "_viewport")
           
         // Center the map on Washington, DC, at zoom 15
-        .setView(new L.LatLng(38.9, -77.035), 15)
+        .setView(new L.LatLng(this.model.get('latitude'), this.model.get('longitude')), 15)
 
         // Add MapBox Streets as a base layer
-        .addLayer(new wax.leaf.connector(tilejson));
+        .addLayer(new wax.leaf.connector(tilejson))
+
+        .on('moveend', _.bind(function() {
+          var center = map.getCenter();
+          this.model.set({
+            latitude: center.lat,
+            longitude: center.lng,
+            zoom: map.getZoom()
+          });
+        }, this));
     }, this));
-    
     return this;
   }
-
 });

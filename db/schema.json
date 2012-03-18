@@ -777,9 +777,15 @@
       },
       "longitude": {
         "name": "Longitude",
-        "unique": false,
+        "unique": true,
         "type": "number",
         "default": -77.035
+      },
+      "zoom": {
+        "name": "Zoom Level",
+        "unique": true,
+        "type": "number",
+        "default": 15
       },
       "comment_count": {
         "name": "Virtual comment count attribute",
