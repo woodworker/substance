@@ -69,6 +69,7 @@ s.views.Controls = Backbone.View.extend(_.extend({}, StateMachine, {
         var self = this;
         
         var childTypes = new Data.Hash();
+
         possibleChildTypes(this.position, this.level).each(function (val, type) {
           if (type !== '/type/section' || val.length == 1) {
             childTypes.set(type, _.last(val));

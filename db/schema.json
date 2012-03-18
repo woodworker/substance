@@ -269,7 +269,7 @@
     "properties": {
       "node": {
         "name": "Node",
-        "type": ["/type/section", "/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code", "/type/question", "/type/answer"],
+        "type": ["/type/section", "/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code", "/type/map"],
         "unique": true,
         "required": true
       },
@@ -673,7 +673,7 @@
       "children": {
         "name": "Children/Contents",
         "unique": false,
-        "type": ["/type/section", "/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code"],
+        "type": ["/type/section", "/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code", "/type/map"],
         "default": []
       }
     },
@@ -709,7 +709,7 @@
       "children": {
         "name": "Children",
         "unique": false,
-        "type": ["/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code", "/type/section"],
+        "type": ["/type/text", "/type/image", "/type/resource", "/type/quote", "/type/code", "/type/map", "/type/section"],
         "default": []
       },
       "comments": {
@@ -748,6 +748,38 @@
         "unique": false,
         "type": ["/type/comment"],
         "default": []
+      },
+      "comment_count": {
+        "name": "Virtual comment count attribute",
+        "unique": true,
+        "type": "number",
+        "default": []
+      },
+      "document": {
+        "name": "Document Membership",
+        "unique": true,
+        "required": true,
+        "type": ["/type/document"]
+      }
+    }
+  },
+
+  "/type/map": {
+    "_id": "/type/map",
+    "type": "/type/type",
+    "name": "Map",
+    "properties": {
+      "latitude": {
+        "name": "Latitude",
+        "unique": true,
+        "type": "string",
+        "default": 38.9
+      },
+      "longitude": {
+        "name": "Longitude",
+        "unique": false,
+        "type": "number",
+        "default": -77.035
       },
       "comment_count": {
         "name": "Virtual comment count attribute",
