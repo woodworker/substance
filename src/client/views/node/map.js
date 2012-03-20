@@ -11,29 +11,21 @@ s.views.Node.define('/type/map', {
 
     var mapEditor = $(s.util.tpl('map_editor', this.model)).appendTo(this.contentEl);
 
-    // Define the map to use from MapBox
-    var url = 'http://api.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp';
+    function initMap() {
+      var map = new L.Map(this.model.html_id + '_viewport', {
+        layers: new L.TileLayer('http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/{z}/{x}/{y}.png', {}),
+        center: new L.LatLng(51.505, -0.09),
+        zoom: 13,
+        attributionControl: false
+      });
 
-    // Get metadata about the map from MapBox
-    wax.tilejson(url,_.bind(function(tilejson) {
-        // Make a new Leaflet map in your container div
-        var map = new L.Map(this.model.html_id + "_viewport")
-          
-        // Center the map on Washington, DC, at zoom 15
-        .setView(new L.LatLng(this.model.get('latitude'), this.model.get('longitude')), 15)
+      // create a marker in the given location and add it to the map
+      var marker = new L.Marker(new L.LatLng(51.5, -0.09));
+      map.addLayer(marker);
+      marker.bindPopup("Your POI").openPopup();
+    }
+    _.delay(_.bind(initMap, this), 20);
 
-        // Add MapBox Streets as a base layer
-        .addLayer(new wax.leaf.connector(tilejson))
-
-        .on('moveend', _.bind(function() {
-          var center = map.getCenter();
-          this.model.set({
-            latitude: center.lat,
-            longitude: center.lng,
-            zoom: map.getZoom()
-          });
-        }, this));
-    }, this));
     return this;
   }
 });
