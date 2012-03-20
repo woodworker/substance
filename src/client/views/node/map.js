@@ -19,10 +19,12 @@ s.views.Node.define('/type/map', {
         attributionControl: false
       });
 
-      // create a marker in the given location and add it to the map
-      var marker = new L.Marker(new L.LatLng(51.5, -0.09));
-      map.addLayer(marker);
-      marker.bindPopup("Your POI").openPopup();
+      map.on('click', function(e) {
+        // create a marker in the given location and add it to the map
+        var marker = new L.Marker(e.latlng);
+        map.addLayer(marker);
+        marker.bindPopup("Your POI<a href=''>mmeeh</a> ").openPopup();
+      });
     }
     _.delay(_.bind(initMap, this), 20);
 
