@@ -7,6 +7,7 @@ s.views.Node.define('/type/map', {
   },
 
   render: function () {
+    var that = this;
     s.views.Node.prototype.render.apply(this);
 
     var mapEditor = $(s.util.tpl('map_editor', this.model)).appendTo(this.contentEl);
@@ -14,16 +15,25 @@ s.views.Node.define('/type/map', {
     function initMap() {
       var map = new L.Map(this.model.html_id + '_viewport', {
         layers: new L.TileLayer('http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/{z}/{x}/{y}.png', {}),
-        center: new L.LatLng(51.505, -0.09),
-        zoom: 13,
+        center: new L.LatLng(that.model.get('latitude'), that.model.get('longitude')),
+        zoom: that.model.get('zoom'),
         attributionControl: false
       });
 
-      map.on('click', function(e) {
-        // create a marker in the given location and add it to the map
-        var marker = new L.Marker(e.latlng);
-        map.addLayer(marker);
-        marker.bindPopup("Your POI<a href=''>mmeeh</a> ").openPopup();
+      map.on('move', function(e) {
+        var center = map.getCenter();
+        that.model.set({
+          latitude: center.lat,
+          longitude: center.lng,
+          zoom: map.getZoom()
+        });
+      });
+
+      var annotator = new Pinpoint(map, {
+        pins: that.model.get('annotations'),
+        update: function(pins) {
+          that.model.set({annotations: pins});
+        }
       });
     }
     _.delay(_.bind(initMap, this), 20);
