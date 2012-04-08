@@ -1,15 +1,12 @@
-<div id="header_title">
-  <a href="/" class="toggle-startpage">Substance</a>
-</div>
+<div class='inner clearfix'>
+  <a class='icon substance toggle-startpage' href='/'>Substance</a>
+  <a class='version' href='http://substance.io/substance/release-notes'>version 0.4.3</a>
 
-<div id="navigation">
-  <% if (session.username) { %><a class="toggle-view" href="/dashboard">Dashboard</a><% } %>
-  <a class="toggle-view" href="/explore">Explore</a>
-  <!--<a class="toggle-view" href="/search">Search</a>-->
-
-  <% if (session.username) { %>
-	  <a href="/new" class="toggle-view" title="Create a new document">
-	    New Doc
-	  </a>
-  <% } %>
+  <ul id='navigation'>
+    <li><a class='button toggle-view' href='/explore'>Networks<sup class='new'>New</sup></a></li>
+    <% if (session.username) { %>
+      <li><a class='button toggle-view' href='/dashboard'>Dashboard</a></li>
+      <li><a href='/new' class='icon new toggle-view' title='Create a new document'>Create a new Document</a></li>
+    <% } %>
+  </ul>
 </div>

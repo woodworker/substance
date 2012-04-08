@@ -5,7 +5,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
   events: {
     'click .logout': 'logout',
     'submit #login-form': 'login',
-    
+
     'click .toggle.notifications': 'toggleNotifications',
     'click #event_notifications a .notification': 'hideNotifications',
     'click a.open-notification': 'openNotification'
@@ -20,7 +20,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
     var version = !p[3] || p[3].indexOf("_") >= 0 ? null : p[3];
     var node = version ? p[4] : p[3];
     var comment = version ? p[5] : p[4];
-    
+
     app.loadDocument(user, doc, version, node, comment);
     router.navigate(url);
     return false;
@@ -29,7 +29,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
   initialize: function () {
     this.notificationsActive = false;
     this.state = session.username ? 'logged_in' : 'logged_out';
-    
+
     setInterval(function() {
       loadNotifications(function () {});
     }, 30000);
@@ -49,12 +49,12 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
   login: function (e) {
     var username = this.$('#login-user').val()
     ,   password = this.$('#login-password').val();
-    
+
     login(username, password, function (err) {
       if (err) return notifier.notify(Notifications.AUTHENTICATION_FAILED);
       window.location.reload();
     });
-    
+
     return false;
   },
 
@@ -64,7 +64,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
         window.location.reload();
       }
     }, this));
-    
+
     return false;
   },
 
@@ -74,7 +74,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
     $(this.el).addClass('notifications-active');
     this.notificationsActive = true;
   },
-  
+
   // Triggered by toggleNotifications and when clicking a notification
   // Triggers count reset (to zero)
   hideNotifications: function() {
@@ -84,11 +84,11 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
     unread.each(function(n) {
       n.set({read: true});
     });
-    
+
     $(this.el).removeClass('notifications-active');
     this.notificationsActive = false;
   },
-  
+
   toggleNotifications: function (e) {
     if (this.notificationsActive) {
       this.hideNotifications();
@@ -104,7 +104,7 @@ s.views.UserStatus = Backbone.View.extend(_.extend({}, StateMachine, {
     logged_in: {
       render: function () {
         var notifications = getNotifications();
-        
+
         return s.util.tpl('user_navigation', {
           notifications: notifications,
           user: currentUser(),

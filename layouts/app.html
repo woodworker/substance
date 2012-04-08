@@ -1,10 +1,8 @@
 <!DOCTYPE html> 
 <html>
-
 <head>
   <title>Substance — Open Documents for the Web</title>
-  <link href="/styles.css" media="screen" rel="stylesheet" type="text/css" />
-  
+  <link href='/styles.css' media='screen' rel='stylesheet' type='text/css' />
   <script>
     var seed = {{{{seed}}}};
     var config = {{{{config}}}};
@@ -12,37 +10,66 @@
     var scripts = {{{{scripts}}}};
     var templates = {{{{templates}}}};
   </script>
-  
-  <script src="/javascripts/head.min.js"></script>
+  <script src='/javascripts/head.min.js'></script>
   <script>
     head.js.apply(this, scripts);
   </script>
-  
   {{{{ga}}}}
 </head>
-
 <body>
-  <div id="container">
-    <div id="main">
+  <div id='container'>
+    <div id='main'>
 
     </div>
   </div>
-  
-  <div id="sync_state"></div>
-  
-  <div id="notifications">
-    <div class="wrapper">
+
+  <div id='sync_state'></div>
+
+  <div id='notifications'>
+    <div class='wrapper'>
     </div>
   </div>
   
-  <div id="footer">
-    <div class="did-you-know">
-      Did you know? Substance is <a href="http://github.com/substance/substance">Open Source Software</a> and free to
-      use for everyone. <a href="/substance/contribute">Support</a> us!
+  <div id='footer'>
+    <div class='did-you-know'>
+      Did you know? Substance is <a href='http://github.com/substance/substance'>Open Source Software</a> and free to
+      use for everyone. <a href='/substance/contribute'>Support</a> us!
     </div>
-    <div class="credits"><a href="http://substance.io/substance/substance">About</a> &middot; <a href="http://twitter.com/_substance" target="_blank">Twitter</a> &middot; <a href="http://github.com/substance/substance" target="_blank">Source Code</a> &middot; <a href="https://groups.google.com/group/substance_" target="_blank">Discuss</a></div>
-    <div class="version"><a href="http://substance.io/substance/release-notes">Substance 0.4.1</a></div>
+    <div class='credits'><a href='http://substance.io/substance/substance'>About</a> &middot; <a href='http://twitter.com/_substance' target='_blank'>Twitter</a> &middot; <a href='http://github.com/substance/substance' target='_blank'>Source Code</a> &middot; <a href='https://groups.google.com/group/substance_' target='_blank'>Discuss</a></div>
+
+    <div class='feature contribute'>
+      <div class='feature-wrapper'>
+        <h1 class='feature-title'>
+          <div class='icon'/>
+          Contribute
+        </h1>
+        <p class='feature-descr'>
+          In order to <b>improve</b> the system
+          and keep it <b>open</b> and <b>free</b>, we
+          need your help!
+        </p>
+        <div>
+          <form id='contribute_form' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+            <input type='hidden' name='cmd' value='_s-xclick'>
+            <input type='hidden' name='hosted_button_id' value='WAP9SGX5H29HS'>
+            <p>You can either <a href='https://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web'>flattr</a> us,
+            or donate using <a href='/contribute' onclick='javascript: $('#contribute_form').submit(); return false;' id='contribute_button' class=''>Paypal</a>.</p>
+            <img alt='' border='0' src='https://www.paypal.com/de_DE/i/scr/pixel.gif' width='1' height='1'>
+          </form>
+          
+          <a class='FlattrButton' style='display:none;' href='http://substance.io'></a>
+          <noscript><a href='http://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web' target='_blank'>
+          <img src='http://api.flattr.com/button/flattr-badge-large.png' alt='Flattr this' title='Flattr this' border='0' /></a></noscript>
+          <p>
+            <br/>We have received <a href='http://substance.io/substance/contribute'>$ 442.00</a> so far. Thank you for that!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
+
 </body>
-
 </html>

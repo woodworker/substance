@@ -1,7 +1,6 @@
 #document_versions {
   overflow: hidden;
   padding-right: 80px;
-  
   .versions-container {
     overflow-y:hidden; overflow-x:auto;
     padding-bottom: 20px;
@@ -15,9 +14,12 @@
     .version {
       float: left;
       background: white;
-      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 0.15);
-      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 0.15);
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 0.15);
+      -moz-box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5),
+        inset 0 0 1px rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5),
+        inset 0 0 1px rgba(255, 255, 255, 0.15);
 
       width: 150px;
       height: 200px;
@@ -25,8 +27,7 @@
       position: relative;
       .count {
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 0; left: 0;
         background: #d6d6d6;
         padding: 0px 8px;
         font-weight: bold;

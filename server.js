@@ -23,7 +23,7 @@ nodemailer.sendmail = true;
 
 // Google Analytics (TODO: move somewhere else)
 var gaScript = [
-  "<script type=\"text/javascript\">",
+  "<script>",
   "  var _gaq = _gaq || [];",
   "  _gaq.push(['_setAccount', 'UA-25112053-1']);",
   "  _gaq.push(['_trackPageview']);",
