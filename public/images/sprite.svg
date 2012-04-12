@@ -14,7 +14,10 @@
    id="svg21236"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="sprite.svg">
+   sodipodi:docname="sprite.svg"
+   inkscape:export-filename="/Users/tristen/github/substance/public/images/sprite.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs21238" />
   <sodipodi:namedview
@@ -24,15 +27,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8329534"
-     inkscape:cx="111.74467"
-     inkscape:cy="474.40246"
+     inkscape:zoom="6.7876554"
+     inkscape:cx="477.75512"
+     inkscape:cy="481.73469"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1059"
      inkscape:window-height="673"
-     inkscape:window-x="33"
+     inkscape:window-x="248"
      inkscape:window-y="0"
      inkscape:window-maximized="0">
     <inkscape:grid
@@ -55,7 +58,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -168,5 +171,40 @@
          id="tspan21819"
          x="0"
          y="527.36218">Logo typeface: Rokkit</tspan></text>
+    <rect
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.82966393;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect22010"
+       width="20"
+       height="20"
+       x="510"
+       y="552.36218" />
+    <path
+       sodipodi:nodetypes="csssccc"
+       inkscape:connector-curvature="0"
+       id="path31118"
+       d="m 4,599.45392 c 0,1.21614 1.7281885,1.00173 2.3626843,0.55778 l 9.1614517,-6.41031 c 0.634486,-0.44396 0.634486,-1.14977 0,-1.59373 l -9.1614517,-6.4103 C 5.5183267,585.11408 4,585.37574 4,586.38132 z"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="display:inline;color:#000000;fill:#f2f3ed;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;marker:none;visibility:visible;overflow:visible;enable-background:accumulate"
+       d="m 494.20638,581.36218 -2.39151,2.38552 1.79363,1.78916 2.3915,-2.38554 z m -2.98938,2.98191 -6.02126,6.03618 -1.19574,2.38554 0.59787,0.59637 2.39149,-1.19278 6.02125,-6.03615 z"
+       id="path6689"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc" />
+    <g
+       id="g14895"
+       transform="translate(0,-1.46143)"
+       style="display:inline;fill:#f2f3ed;fill-opacity:1">
+      <path
+         sodipodi:nodetypes="sccs"
+         inkscape:connector-curvature="0"
+         id="path39349"
+         d="m 490,559.28505 c -3.42105,0 -6.31579,0.8 -10,3.46667 6.87495,-2.38958 13.19074,-2.38958 20,0 -3.68421,-2.66667 -6.57895,-3.46667 -10,-3.46667 z"
+         style="color:#000000;fill:#f2f3ed;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path43784"
+         d="m 489.99995,560.36218 c -2.20914,0 -4,1.79086 -4,4 0,2.20914 1.79086,4 4,4 2.20914,0 4,-1.79086 4,-4 0,-2.20914 -1.79086,-4 -4,-4 z m 0,2 c 1.10457,0 2,0.89543 2,2 0,1.10457 -0.89543,2 -2,2 -1.10457,0 -2,-0.89543 -2,-2 0,-1.10457 0.89543,-2 2,-2 z"
+         style="color:#000000;fill:#f2f3ed;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
   </g>
 </svg>

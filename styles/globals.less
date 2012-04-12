@@ -27,15 +27,18 @@ a {
     border-bottom: 1px solid #999;
     }
 
-p { margin: 0 0 10px 0; }
+p { margin: 0 0 10px; }
 p.info {
   font-style: italic;
   color: rgba(0, 0, 0, 0.7);
   }
 
-h1, h2, h3, h4, h5, h6 { padding: 10px 0 5px 0; }
-h3, h4, h5, h6 { padding-top: 20px; }
-h2 { font-size: 160%; padding-bottom: 15px; }
+h1, h2, h3, h4, h5, h6  { margin: 10px 0 5px 0; }
+h3, h4, h5, h6          { margin: 20px 0 0; }
+h2                      { font-size: 160%; margin-bottom: 15px; }
+
+h3 { font-size: 16px; margin: 0 0 10px; }
+h4 { font-size: 13px; margin: 0 0 10px; }
 
 
 hr.separator {
@@ -66,6 +69,14 @@ input     {  -webkit-transition: background, background-color, border-color, col
 textarea  {  -webkit-transition: background, background-color, border-color, color, opacity 0.35s linear; }
 img       {  -webkit-transition: opacity 0.35s linear; }
 em, .italic { font-style: italic; }
+
+dt {
+  margin: 5px 0 0;
+  }
+dd {
+  font-size: 11px;
+  line-height: 16px;
+  }
 
 sup {
   vertical-align: super;
@@ -286,13 +297,12 @@ body:not(.document) #header {
   Footer
 ---------------------------------------------*/
 #footer {
-  border-top: 1px solid #C1C1C1;
-  background: #E9EAE5;
+  border-top: 1px solid #c0c0c0;
   color: #7C6E60;
-  height: 142px; margin-top: -142px;
-  padding: 30px 40px;
-  overflow: auto;
-  z-index: 1000;
+  height: 119px;
+  height: auto!important;
+  min-height: 119px;
+  margin-top: -119px;
 
   .did-you-know {
     .document-font;
