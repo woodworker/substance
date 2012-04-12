@@ -5,10 +5,11 @@ s.views.Home = Backbone.View.extend({
   },
 
   watchIntro: function() {
-    $('#startpage .intro').height('400');
-    $('#startpage .intro .intro-text').fadeOut();
+    var context = $('#startpage');
+    $('.intro', context).height('440');
+    $('.intro-copy', context).fadeOut();
     setTimeout(function() {
-      $('#startpage .intro .video').html('<video autoplay width="920" height="400" controls><source src="http://substance.io/videos/substance_intro.mp4" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'><source src="http://substance.io/videos/substance_intro.ogv" type="video/ogg" /> </video>')
+      $('.video', context).html('<video autoplay width="920" height="400" controls><source src="http://substance.io/videos/substance_intro.mp4" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'><source src="http://substance.io/videos/substance_intro.ogv" type="video/ogg" /> </video>')
       setTimeout(function() {
         $("video").unbind();
         $("video").bind("ended", function() {
