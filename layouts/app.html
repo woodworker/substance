@@ -29,43 +29,33 @@
 
   <div id='footer'>
     <div class='inner'>
-      <div class='did-you-know'>
-        Did you know? Substance is <a href='http://github.com/substance/substance'>Open Source Software</a> and free to
-        use for everyone. <a href='/substance/contribute'>Support</a> us!
-      </div>
-      <div class='credits'><a href='http://substance.io/substance/substance'>About</a> &middot; <a href='http://twitter.com/_substance' target='_blank'>Twitter</a> &middot; <a href='http://github.com/substance/substance' target='_blank'>Source Code</a> &middot; <a href='https://groups.google.com/group/substance_' target='_blank'>Discuss</a></div>
+      <ul class='menu'>
+        <li><a href='http://substance.io/substance/substance'>About</a></li>
+        <li><a href='http://twitter.com/_substance' target='_blank'>Twitter</a></li>
+        <li><a href='http://github.com/substance/substance' target='_blank'>Source Code</a></li>
+        <li><a href='https://groups.google.com/group/substance_' target='_blank'>Discuss</a></li>
+      </ul>
 
-      <div class='feature contribute'>
-        <div class='feature-wrapper'>
-          <h1 class='feature-title'>
-            <div class='icon'/>
-            Contribute
-          </h1>
-          <p class='feature-descr'>
-            In order to <b>improve</b> the system
-            and keep it <b>open</b> and <b>free</b>, we
-            need your help!
-          </p>
-          <div>
-            <form id='contribute_form' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-              <input type='hidden' name='cmd' value='_s-xclick'>
-              <input type='hidden' name='hosted_button_id' value='WAP9SGX5H29HS'>
-              <p>You can either <a href='https://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web'>flattr</a> us,
-              or donate using <a href='/contribute' onclick='javascript: $('#contribute_form').submit(); return false;' id='contribute_button' class=''>Paypal</a>.</p>
-              <img alt='' border='0' src='https://www.paypal.com/de_DE/i/scr/pixel.gif' width='1' height='1'>
-            </form>
+      <div class='contribute'>
 
-            <a class='FlattrButton' style='display:none;' href='http://substance.io'></a>
-            <noscript><a href='http://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web' target='_blank'>
-            <img src='http://api.flattr.com/button/flattr-badge-large.png' alt='Flattr this' title='Flattr this' border='0' /></a></noscript>
-            <p>
-              <br/>We have received <a href='http://substance.io/substance/contribute'>$ 442.00</a> so far. Thank you for that!
-            </p>
-          </div>
+        <h3>Contribute</h3>
+        <div class='flattr'>
+          <a class='FlattrButton' style='display:none;' href='http://substance.io'></a>
+          <noscript><a href='http://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web' target='_blank'>
+          <img src='http://api.flattr.com/button/flattr-badge-large.png' alt='Flattr this' /></a></noscript>
         </div>
-      </div>
-    </div>
 
+        <form id='contribute_form' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+          <p>Substance is an volunteer effort. Help improve the project by donation via
+          <input type='hidden' name='cmd' value='_s-xclick'>
+          <input type='hidden' name='hosted_button_id' value='WAP9SGX5H29HS'>
+          <a href='https://flattr.com/thing/317181/Substance-Open-Documents-For-The-Web'>flattr</a>, or
+          <a href='/contribute' onclick='javascript: $('#contribute_form').submit(); return false;' id='contribute_button' class=''>Paypal</a>.
+          We have received $442.00 so far. Thank you for that!</p>
+        </form>
+      </div>
+
+    </div>
   </div>
 
 </body>

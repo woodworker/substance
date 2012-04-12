@@ -301,17 +301,46 @@ body:not(.document) #header {
   color: #7C6E60;
   height: 119px;
   height: auto!important;
-  min-height: 119px;
-  margin-top: -119px;
+  min-height: 179px;
 
-  .did-you-know {
-    .document-font;
-    padding: 20px 0;
-    font-size: 22px;
-    font-style: italic;
+  a {
+    border: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    color: #404040;
+    }
+
+  .inner {
+    padding-top: 20px;
+    }
+  .menu {
+    float: left;
+    margin: 40px 10px 20px 0;
+    li {
+      float: left;
+      margin-right: 10px;
+    }
   }
-  .credits { float: left; }
-  .version { float: right; }
+  .contribute {
+    background: #fff url('@{images}/sprite.png') no-repeat -440px -40px;
+    float: left;
+    padding: 20px 40px 20px 80px;
+    width: 600px;
+    border-radius: 4px;
+    color: #585858;
+
+    h3 {
+      font-weight: bold;
+      }
+    a {
+      color: #337a9d;
+      font-weight: bold;
+    }
+
+    .flattr {
+      margin: -20px 0 0 10px;
+      float: right;
+    }
+  }
 }
 
 
