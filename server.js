@@ -589,7 +589,7 @@ app.post('/recover_password', function(req, res) {
       graph.sync(function(err) {
         // Message object
         var message = {
-          sender: 'Substance <info@substance.io>',
+          sender: '"' + config.mail.name + '" <' + config.mail.sender + '>',
           to: user.get('email'),
           subject: 'Reset your Substance password',
           body: 'In order to reset your password on Substance, click on the link below:\n'+config.server_url+"/reset/"+user.get('username')+"/"+user.get('tan'),
