@@ -55,13 +55,11 @@ s.views.DocumentLens = Backbone.View.extend({
     var that = this;
 
     _.each(this.model.items,function(data,key){
-      console.log('item',key,data);
       if(data.hasOwnProperty('name') && data.name == undefined){
         that.model.items[key].name = '';
       }
     });
 
-    console.log(this.model);
     $(this.el).html(s.util.tpl('document_lens', {
       items: this.model.items,
       bounds: bounds,
