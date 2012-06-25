@@ -325,7 +325,7 @@ app.get('/sitemap.xml', function(req, res) {
    res.writeHead(200, {'Content-Type': 'text/plain'});
    _.each(nodes, function(n) {
      if (_.include(n.type, '/type/document')) {
-       res.write("http://substance.io/"+n.creator.split('/')[2]+"/"+n.name+"\n");
+       res.write(config.server_url+"/"+n.creator.split('/')[2]+"/"+n.name+"\n");
      }
    });
    res.end();
