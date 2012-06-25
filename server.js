@@ -22,18 +22,7 @@ var nodemailer = require('nodemailer');
 nodemailer.sendmail = true;
 
 // Google Analytics (TODO: move somewhere else)
-var gaScript = [
-  "<script type=\"text/javascript\">",
-  "  var _gaq = _gaq || [];",
-  "  _gaq.push(['_setAccount', 'UA-25112053-1']);",
-  "  _gaq.push(['_trackPageview']);",
-  "  (function() {",
-  "    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;",
-  "    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';",
-  "    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);",
-  "  })();",
-  "</script>"
-].join('\n');
+var gaScript = '';
 
 // App Config
 global.config = JSON.parse(fs.readFileSync(__dirname+ '/config.json', 'utf-8'));
@@ -704,7 +693,7 @@ app.post('/invite', function(req, res) {
       
       // Message object
       var message = {
-        sender: 'Substance <info@substance.io>',
+        sender: '"' + config.mail.name + '" <' + config.mail.sender + '>',
         to: email,
         subject: doc.get('title'),
         body: "\""+ doc.get('creator')._id.split('/')[2] + "\" invited you to collaborate on his document \""+doc.get('title')+"\" on Substance. \n\n "+ config.server_url +"/collaborate/"+collaborator.get('tan'),

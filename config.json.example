@@ -3,6 +3,10 @@
   "server_host": null,
   "server_url": "http://localhost:3003",
   "server_port": 3003,
+  "mail": {
+    "sender": "info@substance.io",
+    "name": "Substance"
+  },
   "google_analytics": false,
   "secret": "secret option string for session security",
   "letterpress_url": "http://localhost:4004",
